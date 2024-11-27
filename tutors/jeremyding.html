@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutor Profile - Music Tutors AU</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #ffffff;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #dddddd;
+        }
+
+        nav .logo img {
+            height: 80px;
+            width: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000000;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #555555;
+        }
+
+        /* Profile Section */
+        .profile-container {
+            max-width: 900px;
+            margin: 3rem auto;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            border: 1px solid #dddddd;
+            display: flex; /* Two-column layout */
+            gap: 2rem;
+            align-items: flex-start;
+        }
+
+        .profile-container img {
+            width: 250px;
+            height: 250px;
+            border-radius: 10px;
+            object-fit: cover;
+            border: 2px solid #dddddd;
+        }
+
+        .profile-details {
+            flex: 1;
+        }
+
+        .profile-details h2 {
+            color: #000000;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .profile-details p {
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+            line-height: 1.6;
+            color: #555555;
+        }
+
+        .profile-details strong {
+            font-weight: bold;
+            color: #000000;
+        }
+
+        /* Divider for sections */
+        .divider {
+            height: 1px;
+            background-color: #dddddd;
+            margin: 1rem 0;
+            width: 100%;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            color: #000000;
+            margin-top: 2rem;
+            border-top: 1px solid #dddddd;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <a href="/Static Site/index.html"> <img src="/Static Site/assets/logo.PNG" alt="Music Tutors AU Logo"></a>
+        </div>
+        <ul>
+            <li><a href="/Static Site/search.html">Search for Tutors</a></li>
+            <li><a href="/Static Site/about.html">About Us</a></li>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdeAQSdknxfLV7-UP7f7DxsKdyDtMNDAlDbhaF6b4S1wycJDw/viewform?usp=sf_link" target="_blank">Add Listing</a></li>
+        </ul>
+    </nav>
+
+    <!-- Profile Section -->
+    <div class="profile-container">
+        <!-- Tutor Picture -->
+        <img src="https://via.placeholder.com/250" alt="Tutor Picture">
+        
+        <!-- Tutor Details -->
+        <div class="profile-details">
+            <h2>Jeremy Ding</h2>
+            <p><strong>Specialty:</strong> Piano Teacher</p>
+            <p><strong>Location:</strong> Sydney, Australia</p>
+            <p><strong>Price per Hour:</strong> $50</p>
+            <p><strong>Experience:</strong> 10 years of teaching experience</p>
+            <p><strong>Languages:</strong> English & Mandarin</p>
+            <div class="divider"></div>
+            <p><strong>Bio:</strong> Hi my name is Jeremy and I'm passionate about teaching piano. I tailor my teaching style based on the needs of my student. Over the past 5 years, I have taught over 10 students to pass from 1st grade to 8th grade AMEB exams. </p>
+            <div class="divider"></div>
+            <p><strong>Email:</strong> dingjeremy@icloud.com</p>
+            <p><strong>Phone:</strong> +61 400 123 456</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Music Tutors AU. All rights reserved.</p>
+    </footer>
+</body>
+</html>

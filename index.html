@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Tutors AU</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #ffffff;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #dddddd;
+        }
+
+        nav .logo img {
+            height: 80px;
+            width: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000000;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #555555;
+        }
+
+        /* Main Content */
+        .main {
+            text-align: center;
+            padding: 3rem;
+        }
+
+        .main h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #000000;
+        }
+
+        .main p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #333333;
+        }
+
+        /* Tutors Section */
+        .tutors-section {
+            max-width: 1000px;
+            margin: 2rem auto;
+        }
+
+        .tutors-section h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #000000;
+        }
+
+        .tutors {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .tutor-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 1rem;
+            border: 1px solid #dddddd;
+        }
+
+        .tutor-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .tutor-card h3 {
+            color: #000000;
+            margin: 1rem 0 0.5rem 0;
+        }
+
+        .tutor-card p {
+            font-size: 1rem;
+            margin: 0 0 1rem 0;
+            color: #555555;
+        }
+
+        .tutor-card button {
+            padding: 0.5rem 1rem;
+            background-color: #000000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .tutor-card button:hover {
+            background-color: #333333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            color: #000000;
+            margin-top: 2rem;
+            border-top: 1px solid #dddddd;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <a href="index.html"> <img src="assets/logo.png" alt="Music Tutors AU Logo"></a>
+        </div>
+        <ul>
+            <li><a href="search.html">Search for Tutors</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdeAQSdknxfLV7-UP7f7DxsKdyDtMNDAlDbhaF6b4S1wycJDw/viewform?usp=sf_link" target="_blank">Add Listing</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main">
+        <h1>Welcome to Music Tutors AU</h1>
+        <p>Find the best music tutors in your area.</p>
+    </div>
+
+    <!-- Tutors Section -->
+    <div class="tutors-section">
+        <h2>Featured Tutors</h2>
+        <div class="tutors" id="tutors">
+            <!-- Tutor 1 -->
+            <div class="tutor-card">
+                <img src="https://via.placeholder.com/300x200" alt="Jeremy Ding">
+                <h3>Jeremy Ding</h3>
+                <p>Piano Teacher with 10 years of experience</p>
+                <a href="tutors/jeremyding.html"><button>View Profile</button></a>
+            </div>
+            <!-- Tutor 2 -->
+            <div class="tutor-card">
+                <img src="https://via.placeholder.com/300x200" alt="Emily White">
+                <h3>Emily White</h3>
+                <p>Violin Instructor specializing in classical music</p>
+                <button>View Profile</button>
+            </div>
+            <!-- Tutor 3 -->
+            <div class="tutor-card">
+                <img src="https://via.placeholder.com/300x200" alt="Mike Brown">
+                <h3>Mike Brown</h3>
+                <p>Guitarist and songwriter offering beginner to advanced lessons</p>
+                <button>View Profile</button>
+            </div>
+            <!-- Tutor 4 -->
+            <div class="tutor-card">
+                <img src="https://via.placeholder.com/300x200" alt="Sarah Johnson">
+                <h3>Sarah Johnson</h3>
+                <p>Vocal coach with expertise in pop and opera styles</p>
+                <button>View Profile</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Music Tutors AU. Consocious Pty Ltd.</p>
+    </footer>
+</body>
+</html>
