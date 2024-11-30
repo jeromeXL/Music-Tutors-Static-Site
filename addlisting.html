@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Listing - Music Tutors AU</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #ffffff;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #dddddd;
+        }
+
+        nav .logo img {
+            height: 80px;
+            width: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000000;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #555555;
+        }
+
+        /* Form Container */
+        .form-container {
+            max-width: 600px;
+            margin: 3rem auto;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #dddddd;
+        }
+
+        .form-container h1 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        label {
+            font-size: 1rem;
+        }
+
+        input, select, textarea {
+            padding: 0.7rem;
+            font-size: 1rem;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        button {
+            padding: 0.7rem;
+            background-color: #000000;
+            color: white;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #333333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            color: #000000;
+            margin-top: 2rem;
+            border-top: 1px solid #dddddd;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/logo.png" alt="Music Tutors AU Logo">
+            </a>
+        </div>
+        <ul>
+            <li><a href="search.html">Search for Tutors</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="addlisting.html">Add Listing</a></li>
+        </ul>
+    </nav>
+
+    <!-- Form Section -->
+    <div class="form-container">
+        <h1>Tutor Listing Form</h1>
+        <form name="add-listing" method="POST" action="/thank-you" enctype="multipart/form-data" data-netlify="true">
+            <!-- Hidden input for Netlify -->
+            <input type="hidden" name="form-name" value="add-listing" />
+
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+
+            <label for="photo">Photo of yourself (to be displayed on your listing):</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required />
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" placeholder="Enter your address" required />
+
+            <label for="instruments">Instruments you would like to teach:</label>
+            <input type="text" id="instruments" name="instruments" placeholder="Enter instruments" required />
+
+            <label for="languages">Languages you can speak:</label>
+            <input type="text" id="languages" name="languages" placeholder="Enter languages" required />
+
+            <label for="hourly-fee">Hourly Fee:</label>
+            <input type="text" id="hourly-fee" name="hourly-fee" placeholder="Enter hourly fee" required />
+
+            <label for="description">Your Bio:</label>
+            <textarea id="description" name="description" rows="5" placeholder="Describe yourself and your teaching experience" required></textarea>
+
+            <label for="payment-plan">Payment Plan:</label>
+            <select id="payment-plan" name="payment-plan" required>
+                <option value="" disabled selected>Select payment plan</option>
+                <option value="individual">Individual</option>
+                <option value="school">School</option>
+                <option value="business">Business</option>
+            </select>
+
+            <label for="proof">Proof of Payment:</label>
+            <input type="file" id="proof" name="proof" required />
+
+            <button type="submit">Submit Listing</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Music Tutors AU. Consocious Pty Ltd.</p>
+    </footer>
+</body>
+</html>
