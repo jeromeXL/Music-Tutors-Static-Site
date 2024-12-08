@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Tutors - Music Tutors AU</title>
     <style>
+        /* Global Styles */
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
@@ -46,6 +47,39 @@
             color: #555555;
         }
 
+        /* Main Section */
+        .main {
+            text-align: center;
+            padding: 6rem 3rem;
+            background: url('assets/home.jpg') center center / cover no-repeat;
+            color: #ffffff;
+            position: relative;
+            z-index: 1;
+        }
+
+        .main::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+            z-index: -1;
+        }
+
+        .main h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .main p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #dddddd;
+        }
+
         .search-container {
             max-width: 600px;
             margin: 2rem auto;
@@ -59,52 +93,57 @@
             width: 100%;
         }
 
+        /* Tutor List */
         .tutor-list {
-            max-width: 600px;
+            max-width: 900px;
             margin: 2rem auto;
-            padding: 1rem;
-            background-color: #f9f9f9;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .tutor-card {
+            background-color: #ffffff;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 1.5rem;
             border: 1px solid #dddddd;
+            transition: transform 0.3s;
         }
 
-        .tutor {
-            margin-bottom: 1.5rem;
-            border-bottom: 1px solid #dddddd;
-            padding-bottom: 1rem;
+        .tutor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
 
-        .tutor:last-child {
-            border-bottom: none;
+        .tutor-card h3 {
+            margin-bottom: 0.5rem;
+            color: #000000;
         }
 
-        .tutor h3 {
-            margin: 0.5rem 0;
-        }
-
-        .tutor p {
-            margin: 0.3rem 0;
+        .tutor-card p {
+            font-size: 1rem;
             color: #555555;
+            margin: 0.3rem 0;
         }
 
-        .view-profile-button {
+        .tutor-card a.view-profile-button {
+            display: inline-block;
+            margin-top: 1rem;
             padding: 0.5rem 1rem;
-            background-color: #000000;
-            color: white;
+            background-color: #007bff;
+            color: #ffffff;
+            font-size: 1rem;
             border: none;
             border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background-color 0.3s;
-            margin-top: 0.5rem;
             text-decoration: none;
+            transition: background-color 0.3s;
         }
 
-        .view-profile-button:hover {
-            background-color: #333333;
+        .tutor-card a.view-profile-button:hover {
+            background-color: #0056b3;
         }
-        
     </style>
 </head>
 <body>
@@ -122,22 +161,28 @@
         </ul>
     </nav>
 
-    <!-- Search Form -->
-    <div class="search-container">
-        <h1>Find a Music Tutor</h1>
-        <select id="instrument" onchange="filterTutors()">
-            <option value="" disabled selected>Select an Instrument</option>
-            <option value="piano">Piano</option>
-            <option value="violin">Violin</option>
-            <option value="cello">Cello</option>
-            <option value="guitar">Guitar</option>
-            <option value="vocal">Vocal</option>
-            <option value="flute">Flute</option>
-            <option value="clarinet">Clarinet</option>
-            <option value="saxophone">Saxophone</option>
-            <option value="trumpet">Trumpet</option>
-            <option value="drums">Drums</option>
-        </select>
+    <!-- Main Content -->
+    <div class="main">
+        <h1>Welcome to Music Tutors</h1>
+        <p>Find the best music tutors in your area.</p>
+
+        <!-- Search Form -->
+        <div class="search-container">
+            <h2>Find a Music Tutor</h2>
+            <select id="instrument" onchange="filterTutors()">
+                <option value="" disabled selected>Select an Instrument</option>
+                <option value="piano">Piano</option>
+                <option value="violin">Violin</option>
+                <option value="cello">Cello</option>
+                <option value="guitar">Guitar</option>
+                <option value="vocal">Vocal</option>
+                <option value="flute">Flute</option>
+                <option value="clarinet">Clarinet</option>
+                <option value="saxophone">Saxophone</option>
+                <option value="trumpet">Trumpet</option>
+                <option value="drums">Drums</option>
+            </select>
+        </div>
     </div>
 
     <!-- Tutor List -->
@@ -165,13 +210,12 @@
 
             filteredTutors.forEach(tutor => {
                 const tutorDiv = document.createElement('div');
-                tutorDiv.className = 'tutor';
+                tutorDiv.className = 'tutor-card';
                 tutorDiv.innerHTML = `
                     <h3>${tutor.name}</h3>
                     <p><strong>Instrument:</strong> ${tutor.instrument}</p>
                     <p><strong>Location:</strong> ${tutor.location}</p>
                     <p><strong>Email:</strong> <a href="mailto:${tutor.email}">${tutor.email}</a></p>
-                    <br>
                     <a href="${tutor.profileUrl}" class="view-profile-button">View Profile</a>
                 `;
                 tutorList.appendChild(tutorDiv);

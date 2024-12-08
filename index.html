@@ -24,7 +24,7 @@
         }
 
         nav .logo img {
-            height: 80px;
+            height: 60px;
             width: auto;
         }
 
@@ -50,22 +50,53 @@
             color: #555555;
         }
 
+        /* Add Listing Button */
+        nav ul li a.add-listing {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 0.5rem 1rem;
+            border-radius: 5px; /* Smooth edges */
+            font-size: 1rem;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a.add-listing:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
         /* Main Content */
         .main {
             text-align: center;
-            padding: 3rem;
+            padding: 6rem 3rem;
+            background: url('assets/home.jpg') center center / cover no-repeat;
+            color: #ffffff;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Add a faded overlay */
+        .main::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+            z-index: -1;
         }
 
         .main h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
-            color: #000000;
+            color: #ffffff;
         }
 
         .main p {
             font-size: 1.2rem;
             margin-bottom: 2rem;
-            color: #333333;
+            color: #dddddd;
         }
 
         /* Tutors Section */
@@ -145,15 +176,17 @@
             <a href="index.html"> <img src="assets/logo.png" alt="Music Tutors AU Logo"></a>
         </div>
         <ul>
-            <li><a href="search.html">Search for Tutors</a></li>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="addlisting.html">Add Listing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="search.html">Find Tutors</a></li>
+            <li><a href="addlisting.html" class="add-listing">Add Listing</a></li>
         </ul>
     </nav>
 
     <!-- Main Content -->
     <div class="main">
-        <h1>Welcome to Music Tutors AU</h1>
+        <h1>Welcome to Music Tutors</h1>
         <p>Find the best music tutors in your area.</p>
     </div>
 
@@ -191,6 +224,7 @@
             </div>
         </div>
     </div>
+    
 
     <!-- Footer -->
     <footer>
