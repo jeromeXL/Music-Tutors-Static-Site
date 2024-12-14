@@ -55,14 +55,14 @@
             background-color: #007bff;
             color: #ffffff;
             padding: 0.5rem 1rem;
-            border-radius: 5px; /* Smooth edges */
+            border-radius: 5px;
             font-size: 1rem;
             text-decoration: none;
             transition: background-color 0.3s;
         }
 
         nav ul li a.add-listing:hover {
-            background-color: #0056b3; /* Darker blue on hover */
+            background-color: #0056b3;
         }
 
         /* Main Content */
@@ -75,7 +75,6 @@
             z-index: 1;
         }
 
-        /* Add a faded overlay */
         .main::before {
             content: '';
             position: absolute;
@@ -83,7 +82,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+            background: rgba(0, 0, 0, 0.5);
             z-index: -1;
         }
 
@@ -97,6 +96,33 @@
             font-size: 1.2rem;
             margin-bottom: 2rem;
             color: #dddddd;
+        }
+
+        /* Trusted Section */
+        .trusted-section {
+            text-align: center;
+            padding: 2rem 1rem;
+            background-color: #f9f9f9;
+        }
+
+        .trusted-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #333333;
+        }
+
+        .trusted-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .trusted-logos a img {
+            height: 80px;
+            object-fit: contain;
         }
 
         /* Tutors Section */
@@ -118,14 +144,24 @@
             gap: 1.5rem;
         }
 
+        .tutors a {
+            text-decoration: none;
+        }
+
         .tutor-card {
             background-color: #ffffff;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             text-align: center;
-            padding: 1rem;
             border: 1px solid #dddddd;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .tutor-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
         .tutor-card img {
@@ -141,22 +177,8 @@
 
         .tutor-card p {
             font-size: 1rem;
-            margin: 0 0 1rem 0;
+            margin: 0.5rem 0;
             color: #555555;
-        }
-
-        .tutor-card button {
-            padding: 0.5rem 1rem;
-            background-color: #000000;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .tutor-card button:hover {
-            background-color: #333333;
         }
 
         footer {
@@ -186,45 +208,47 @@
 
     <!-- Main Content -->
     <div class="main">
-        <h1>Welcome to Music Tutors</h1>
-        <p>Find the best music tutors in your area.</p>
+        <h1>We connect music tutors with students</h1>
+        <p>Expert tutors, local to you</p>
+    </div>
+
+    <!-- Trusted Section -->
+    <div class="trusted-section">
+        <h2>Trusted by Australia's Top Music Schools</h2>
+        <div class="trusted-logos">
+            <a href="https://www.vivamusicacademy.com/" target="_blank">
+                <img src="assets/schools/viva.png" alt="Viva Music Academy Logo">
+            </a>
+        </div>
     </div>
 
     <!-- Tutors Section -->
     <div class="tutors-section">
         <h2>Featured Tutors</h2>
-        <div class="tutors" id="tutors">
+        <div class="tutors">
             <!-- Tutor 1 -->
-            <div class="tutor-card">
-                <img src="https://via.placeholder.com/300x200" alt="Jeremy Ding">
+            <a href="tutors/jeremyding.html" class="tutor-card">
+                <img src="assets/team/jeremyding.jpeg" alt="Jeremy Ding">
                 <h3>Jeremy Ding</h3>
-                <p>Piano Teacher with 10 years of experience</p>
-                <a href="tutors/jeremyding.html"><button>View Profile</button></a>
-            </div>
+                <p>Piano & Clarinet Tutor</p>
+                <p>Sydney, Australia</p>
+            </a>
             <!-- Tutor 2 -->
-            <div class="tutor-card">
-                <img src="https://via.placeholder.com/300x200" alt="Emily White">
-                <h3>Emily White</h3>
-                <p>Violin Instructor specializing in classical music</p>
-                <button>View Profile</button>
-            </div>
+            <a href="tutors/jameshu.html" class="tutor-card">
+                <img src="assets/tutors/jameshu.png" alt="James Hu">
+                <h3>James Hu</h3>
+                <p>Piano Tutor</p>
+                <p>Sydney, Australia</p>
+            </a>
             <!-- Tutor 3 -->
-            <div class="tutor-card">
-                <img src="https://via.placeholder.com/300x200" alt="Mike Brown">
-                <h3>Mike Brown</h3>
-                <p>Guitarist and songwriter offering beginner to advanced lessons</p>
-                <button>View Profile</button>
-            </div>
-            <!-- Tutor 4 -->
-            <div class="tutor-card">
-                <img src="https://via.placeholder.com/300x200" alt="Sarah Johnson">
-                <h3>Sarah Johnson</h3>
-                <p>Vocal coach with expertise in pop and opera styles</p>
-                <button>View Profile</button>
-            </div>
+            <a href="tutors/jerrywang.html" class="tutor-card">
+                <img src="assets/tutors/jerrywang.png" alt="Jerry Wang">
+                <h3>Jerry Wang</h3>
+                <p>Vocal and Violin Tutor</p>
+                <p>Sydney, Australia</p>
+            </a>
         </div>
     </div>
-    
 
     <!-- Footer -->
     <footer>

@@ -24,7 +24,7 @@
         }
 
         nav .logo img {
-            height: 80px;
+            height: 60px;
             width: auto;
         }
 
@@ -48,6 +48,20 @@
 
         nav ul li a:hover {
             color: #555555;
+        }
+
+        nav ul li a.add-listing {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a.add-listing:hover {
+            background-color: #0056b3;
         }
 
         /* Profile Section */
@@ -116,33 +130,37 @@
     <!-- Navigation Bar -->
     <nav>
         <div class="logo">
-            <a href="/Static Site/index.html"> <img src="/Static Site/assets/logo.PNG" alt="Music Tutors AU Logo"></a>
+            <a href="/index.html"> <img src="/assets/logo.PNG" alt="Music Tutors AU Logo"></a>
         </div>
         <ul>
-            <li><a href="/Static Site/search.html">Search for Tutors</a></li>
-            <li><a href="/Static Site/about.html">About Us</a></li>
-            <li><a href="/Static Site/addlisting.html">Add Listing</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/blog.html">Blog</a></li>
+            <li><a href="/search.html">Find Tutors</a></li>
+            <li><a href="/addlisting.html" class="add-listing">Add Listing</a></li>
         </ul>
     </nav>
 
     <!-- Profile Section -->
     <div class="profile-container">
         <!-- Tutor Picture -->
-        <img src="https://via.placeholder.com/250" alt="Tutor Picture">
+        <img src="/assets/team/jeremyding.jpeg" alt="Tutor Picture">
         
         <!-- Tutor Details -->
         <div class="profile-details">
             <h2>Jeremy Ding</h2>
-            <p><strong>Specialty:</strong> Piano Teacher</p>
+            <p><strong>Specialty:</strong> Piano, Clarinet</p>
             <p><strong>Location:</strong> Sydney, Australia</p>
-            <p><strong>Price per Hour:</strong> $50</p>
-            <p><strong>Experience:</strong> 10 years of teaching experience</p>
+            <p><strong>Price per Hour:</strong> $80</p>
+            <p><strong>Credentials:</strong> Certificate of Performance Piano (Honours), Grade 8 Clarinet</p>
             <p><strong>Languages:</strong> English & Mandarin</p>
             <div class="divider"></div>
-            <p><strong>Bio:</strong> Hi my name is Jeremy and I'm passionate about teaching piano. I tailor my teaching style based on the needs of my student. Over the past 5 years, I have taught over 10 students to pass from 1st grade to 8th grade AMEB exams. </p>
+            <p><strong>Bio:</strong> Jeremy (23 years old) is an experienced and accomplished music teacher, holding a Certificate of Performance in Piano (Honours) and Grade 8 Clarinet. With over 8 years of teaching experience, Jeremy has guided students from beginner to advanced levels, helping them excel in their musical journeys.
+                Specializing in music theory, Jeremy boasts an impressive 100% Honours rate (85+), with 70% of his students achieving High Distinction (95+). His dedication to fostering a deep understanding of music theory and performance makes him a sought-after instructor for students aiming to achieve their best.
+                </p>
             <div class="divider"></div>
-            <p><strong>Email:</strong> dingjeremy@icloud.com</p>
-            <p><strong>Phone:</strong> +61 400 123 456</p>
+            <p><strong>Email:</strong> info@musictheoryonline.com.au</p>
+            <p><strong>Phone:</strong> +61 426 029 138</p>
         </div>
     </div>
 

@@ -6,10 +6,22 @@
     <title>Contact Us - Music Tutors AU</title>
     <style>
         /* Global Styles */
-        body {
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%; /* Ensures the page takes full height */
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
             font-family: 'Arial', sans-serif;
-            background-color: #ffffff;
+            background: url('assets/contact.jpg') center center / cover no-repeat;
+            background-attachment: fixed; /* Ensures the background stays fixed */
             color: #000000;
         }
 
@@ -65,16 +77,24 @@
             background-color: #0056b3;
         }
 
+        /* Main Content */
+        .main-content {
+            flex: 1; /* Pushes the footer to the bottom */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 1rem;
+        }
+
         /* Contact Section */
         .contact-section {
             max-width: 600px;
-            margin: 3rem auto;
+            width: 100%; /* Ensures the form width is preserved */
             padding: 2rem;
-            background-color: #f9f9f9;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border: 1px solid #dddddd;
-            text-align: left;
         }
 
         .contact-section h1 {
@@ -96,6 +116,7 @@
             font-size: 1rem;
             border: 1px solid #cccccc;
             border-radius: 5px;
+            background-color: #ffffff;
         }
 
         .contact-section button {
@@ -119,7 +140,6 @@
             padding: 1rem;
             background-color: #f9f9f9;
             color: #000000;
-            margin-top: 2rem;
             border-top: 1px solid #dddddd;
         }
     </style>
@@ -139,18 +159,21 @@
         </ul>
     </nav>
 
-    <!-- Contact Section -->
-    <div class="contact-section">
-        <h1>Contact Us</h1>
-        <form name="inquiry-form" method="POST" data-netlify="true">
-            <!-- Netlify Hidden Input -->
-            <input type="hidden" name="form-name" value="inquiry-form" />
-            <input type="text" name="name" placeholder="Your Name" required />
-            <input type="email" name="email" placeholder="Your Email" required />
-            <input type="tel" name="phone" placeholder="Your Phone Number" required />
-            <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <h1>Contact Us</h1>
+            <form name="inquiry-form" method="POST" data-netlify="true">
+                <!-- Netlify Hidden Input -->
+                <input type="hidden" name="form-name" value="inquiry-form" />
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+                <input type="tel" name="phone" placeholder="Your Phone Number" required />
+                <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
     </div>
 
     <!-- Footer -->
